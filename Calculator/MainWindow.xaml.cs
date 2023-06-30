@@ -35,7 +35,7 @@ namespace Calculator
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content}7";
+                resultLabel.Content = $"{resultLabel.Content}7 ";
             }
         }
     }
