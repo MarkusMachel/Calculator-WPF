@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator
 {
@@ -128,6 +116,15 @@ namespace Calculator
         public static double Add(double a, double b) => a + b;
         public static double Substract(double a, double b) => a - b;
         public static double Multiply(double a, double b) => a * b;
-        public static double Divide(double a, double b) => a / b;
+        public static double Divide(double a, double b)
+        {
+            if (b == 0)
+            {
+                MessageBox.Show("Divsion by zero is not supported", "Wrong operation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
+
+            return a / b;
+        }
     }
 }
